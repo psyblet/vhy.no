@@ -42,18 +42,18 @@ function fromReddit(id, el, domains) {
             var titleElement = document.createElement(el)
             var isImage = ['media.makeameme.org', 'i.redd.it', 'i.imgur.com'].indexOf(post.domain) > -1
             var isVideo = post.url.search(new RegExp('.gifv|.webm', 'gi'))
-            var videoContentType = post.url.substr(isVideo, 4) === 'gifv' ? 'image/gif' : 'video/webm'
+            var videoContentType = 'video/mp4'
             if (isImage) {
                 imageElement.innerHTML = '<img src="' + post.url + '" alt="' + post.title + '" />'
             }
 
             if (isVideo > -1) {
-                imageElement.innerHTML = '<video><source src="' + post.url + '" type="' + videoContentType + '"></video>'
+                imageElement.innerHTML = '<video preload="auto" autoplay="autoplay" loop="loop"><source src="' + post.url.replace('gifv', 'mp4') + '" type="' + videoContentType + '"></video>'
             }
 
             console.log(post.title, post.url, 'video: ' + isVideo, 'image: ' + isImage)
 
-            titleElement.innerHTML = '<a href="' + post.url + '">' + post.title + '</a>'
+            titleElement.innerHTML = '<a href="https://reddit.com' + post.permalink + '">' + post.title + '</a>'
             titleElement.classList.add('large')
 
             if (isImage || isVideo > -1) document.getElementById(id).appendChild(imageElement)
