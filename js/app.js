@@ -26,8 +26,6 @@ function fromReddit(id, el, domains) {
     this.validKeywords = ['vy', 'nsb', 'tog', 'skandale', 'verden bryter sammen', 'uuuææææææ']
 
     this.vyDefaultListener = function (e) {
-        // mosaicCounter = 0
-
         var filter = function (post) {
             post = post.data
             var searchRegex = new RegExp(validKeywords.join('|'), 'gi')
@@ -43,6 +41,7 @@ function fromReddit(id, el, domains) {
             var isImage = ['media.makeameme.org', 'i.redd.it', 'i.imgur.com'].indexOf(post.domain) > -1
             var isVideo = post.url.search(new RegExp('.gifv|.webm', 'gi'))
             var videoContentType = 'video/mp4'
+
             if (isImage) {
                 imageElement.innerHTML = '<img src="' + post.url + '" alt="' + post.title + '" />'
             }
@@ -51,24 +50,11 @@ function fromReddit(id, el, domains) {
                 imageElement.innerHTML = '<video preload="auto" autoplay="autoplay" loop="loop"><source src="' + post.url.replace('gifv', 'mp4') + '" type="' + videoContentType + '"></video>'
             }
 
-            console.log(post.title, post.url, 'video: ' + isVideo, 'image: ' + isImage)
-
             titleElement.innerHTML = '<a href="https://reddit.com' + post.permalink + '">' + post.title + '</a>'
             titleElement.classList.add('large')
 
             if (isImage || isVideo > -1) document.getElementById(id).appendChild(imageElement)
             document.getElementById(id).appendChild(titleElement)
-
-            // jeg hater alle som skal lese koden min
-            // if (mosaicCounter % 2) {
-            //     if (isImage || isVideo > -1) document.getElementById(id).appendChild(imageElement)
-            //     document.getElementById(id).appendChild(titleElement)
-            // } else {
-            //     document.getElementById(id).appendChild(titleElement)
-            //     if (isImage || isVideo > -1) document.getElementById(id).appendChild(imageElement)
-            // }
-
-            // mosaicCounter++
         }
 
         e.data.children.filter(filter.bind(this)).forEach(draw.bind(this))

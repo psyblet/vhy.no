@@ -41,6 +41,11 @@ h1 {
   font-size: 50px;
   margin-top: 7rem;
   margin-bottom: 5rem;
+  line-height: 2rem;
+}
+
+h1 a {
+  text-decoration: none;
 }
 
 @media screen and (max-width: 992px) {
@@ -90,7 +95,8 @@ h1 {
   font-size: 20px;
   margin-top: 5rem;
   text-align: left;
-  margin-left: 8rem;
+  line-height: 2rem;
+  margin-left: 15rem;
 }
 
 .large {
@@ -135,6 +141,10 @@ header {
   -webkit-box-pack: justify;
   -webkit-box-align: center;
   justify-content: space-between;
+}
+
+header img {
+  margin-left: 1.5rem;
 }
 
 .nav {
