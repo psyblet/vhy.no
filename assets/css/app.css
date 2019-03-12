@@ -32,6 +32,7 @@ body {
   width: 100%;
   font-size: 18px;
   position: relative;
+  line-height: 1.5rem;
   font-family: "Vhy Pirate Light", sans-serif;
 }
 
@@ -136,23 +137,6 @@ header {
   justify-content: space-between;
 }
 
-footer {
-  width: 100%;
-  padding: 1rem 4rem;
-  color: #fff;
-  display: flex;
-  position: absolute;
-  align-items: center;
-  background: #383e42;
-  justify-content: space-between;
-}
-
-footer a,
-footer a:visited,
-footer a:focus {
-  color: #fff;
-}
-
 .nav {
   margin-right: 2rem;
   font-family: "Vhy Pirate Light", sans-serif;
@@ -203,4 +187,35 @@ footer a:focus {
   right: 0;
   position: absolute;
   transition: right ease-in-out .15s;
+}
+
+footer {
+  width: 100%;
+  color: #fff;
+  display: flex;
+  position: absolute;
+  padding: 1rem 4rem;
+  align-items: center;
+  background: #383e42;
+  justify-content: space-around;
+}
+
+footer .list {
+  width: 25%;
+  padding: 0;
+  font-size: 20px;
+  list-style: none;
+}
+
+footer a,
+footer a:visited,
+footer a:focus {
+  color: #fff;
+  text-decoration: none;
+  border-bottom: 1px solid white;
+}
+
+footer a:hover {
+  color: #00957a;
+  border-bottom-color: #00957a;
 }
