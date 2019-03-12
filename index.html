@@ -5,35 +5,108 @@
     <title>But vhy?!</title>
 
     <style>
+      body {
+        width: 100%;
+        font-size: 16px;
+        font-family: Arial, sans-serif;
+      }
+
+      .d-flex {
+        display: flex;
+      }
+
+      .wrap {
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-around;
+      }
+
       img {
-      width: 25%;
-      height: auto;
+        width: 100%;
+        height: auto;
+      }
+
+      p {
+        width: 40%;
+        display: flex;
+        margin: 20px 0;
+        padding: 10px 6px;
+        min-height: 200px;
+        text-align: center;
+        align-items: center;
+        justify-content: center
+      }
+
+      a,
+      a:hover,
+      a:visited,
+      a:active,
+      a:focus {
+        color: #00957a;
+        line-height: 1.5em;
+      }
+
+      .large {
+        font-size: 24px;
+      }
+
+      .text-center {
+        text-align: center;
+      }
+
+      footer {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      @media screen and (max-width: 992px) {
+        p {
+          max-width: 100%;
+        }
       }
     </style>
   </head>
-  
+
   <body>
-    <p>
-	Vhy not <a href="https://www.nrk.no/norge/nsbs-navneendring-vil-koste-opp-mot-280-millioner-kroner-1.14468467">kaste bort 280 MNOK</a> på å sminke NSB?
-    </p>
-    <p>
-      <img src="pics/t0i7rzpyynl21.jpg" alt="Vhy though?">
-    </p>
-    <p>
-      <img src="pics/VA9b6F0.jpg" alt="Vhy though?">
-    </p>
-    <p>
-      – Det er vanskelig å komme med en saklig kommentar, det må jeg innrømme. Du tror bare ikke at slikt er mulig, sier Lomheim til <a href="https://www.vg.no/nyheter/innenriks/i/Mg4dyK/nytt-nsb-navn-faar-spraak-slakt">VG</a>.
-    </p>
-    <p>
-      <img src="pics/tar-seg-ikke-5c8797.jpg" alt="Vhy though?">
-    </p>
-    <p>
-      Mer gull på <a href="https://www.instagram.com/espenpalervaag/">Espen Lervaags Instagram</a>.
-    </p>
-    <p>
-      Jeg eier ikke designferdigheter! Bidra gjerne på <a href="https://github.com/gspr/vhy.no">https://github.com/gspr/vhy.no</a>.
-    </p>
+    <div class="d-flex wrap">
+      <p class="large">
+  	Vhy not <a href="https://www.nrk.no/norge/nsbs-navneendring-vil-koste-opp-mot-280-millioner-kroner-1.14468467">kaste bort 280 MNOK</a> på å sminke NSB?
+      </p>
+      <p>
+        <img src="pics/t0i7rzpyynl21.jpg" alt="Vhy though?">
+      </p>
+      <p>
+        <img src="pics/VA9b6F0.jpg" alt="Vhy though?">
+      </p>
+      <p class="large">
+        – Det er vanskelig å komme med en saklig kommentar, det må jeg innrømme. Du tror bare ikke at slikt er mulig, sier Lomheim til <a href="https://www.vg.no/nyheter/innenriks/i/Mg4dyK/nytt-nsb-navn-faar-spraak-slakt">VG</a>.
+      </p>
+      <p>
+        <img src="pics/tar-seg-ikke-5c8797.jpg" alt="Vhy though?">
+      </p>
+    </div>
+
+    <div class="d-flex wrap">
+      <h2 class="text-center">Siste fra /r/norge</h2>
+    </div>
+    <div class="d-flex wrap" id="from-reddit"></div>
+
+    <footer>
+      <p>
+        <span>
+          Mer gull på <a href="https://www.instagram.com/espenpalervaag/">Espen Lervaags Instagram</a>.
+        </span>
+      </p>
+      <p>
+        <span>
+          Jeg eier ikke designferdigheter! Bidra gjerne på <a href="https://github.com/gspr/vhy.no">https://github.com/gspr/vhy.no</a>.
+        </span>
+      </p>
+    </footer>
+
+    <script src="/js/app.js"></script>
   </body>
 
-</html> 
+</html>
