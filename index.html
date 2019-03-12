@@ -3,84 +3,36 @@
   <head>
     <meta charset="UTF-8">
     <title>But vhy?!</title>
-
-    <style>
-      body {
-        width: 100%;
-        font-size: 16px;
-        font-family: Arial, sans-serif;
-      }
-
-      .d-flex {
-        display: flex;
-      }
-
-      .wrap {
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: space-around;
-      }
-
-      img {
-        width: 100%;
-        height: auto;
-      }
-
-      p {
-        width: 40%;
-        display: flex;
-        margin: 20px 0;
-        padding: 10px 6px;
-        min-height: 200px;
-        text-align: center;
-        align-items: center;
-        justify-content: center
-      }
-
-      a,
-      a:hover,
-      a:visited,
-      a:active,
-      a:focus {
-        color: #00957a;
-        line-height: 1.5em;
-      }
-
-      .large {
-        font-size: 24px;
-      }
-
-      .text-center {
-        text-align: center;
-      }
-
-      footer {
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-
-      @media screen and (max-width: 992px) {
-        p {
-          max-width: 100%;
-        }
-      }
-    </style>
+    <link rel="stylesheet" href="/assets/css/app.css">
   </head>
 
   <body>
+    <header>
+      <div class="logo">
+        <img height="54px" src="/pics/why-logo.jpg" alt="">
+      </div>
+      <div class="nav">
+        <ul>
+          <li>
+            <a href="https://vy.no">Vy</a>
+            <img class="arrow-right" src="/pics/vy_pil_høyre.svg">
+          </li>
+        </ul>
+      </div>
+    </header>
     <div class="d-flex wrap">
-        <p class="large">
-          <span>
-            Vhy not <a href="https://www.nrk.no/norge/nsbs-navneendring-vil-koste-opp-mot-280-millioner-kroner-1.14468467">kaste bort 280 MNOK</a> på å sminke NSB?
+        <h1>
+          Verden endrer seg. Vi endrer oss.
+          <span class="d-block">
+            Vhy not <a href="https://www.nrk.no/norge/nsbs-navneendring-vil-koste-opp-mot-280-millioner-kroner-1.14468467">kaste bort 280 millioner norske kroner</a> på å sminke NSB?
           </span>
-        </p>
-        <p>
-          <img src="pics/t0i7rzpyynl21.jpg" alt="Vhy though?">
-        </p>
+        </h1>
+
         <p>
           <img src="pics/VA9b6F0.jpg" alt="Vhy though?">
+        </p>
+        <p>
+          <img src="pics/48wzzef7ipl21.jpg" alt="Vhy though?">
         </p>
         <p class="large">
           <span>
@@ -91,14 +43,9 @@
           <img src="pics/tar-seg-ikke-5c8797.jpg" alt="Vhy though?">
         </p>
         <p>
-          <img src="pics/48wzzef7ipl21.jpg" alt="Vhy though?">
+          <img src="pics/t0i7rzpyynl21.jpg" alt="Vhy though?">
         </p>
     </div>
-
-    <div class="d-flex wrap">
-      <h2 class="text-center">Siste fra /r/norge</h2>
-    </div>
-    <div class="d-flex wrap" id="from-reddit"></div>
 
     <footer>
       <p>
@@ -112,8 +59,6 @@
         </span>
       </p>
     </footer>
-
-    <script src="/js/app.js"></script>
   </body>
 
 </html>

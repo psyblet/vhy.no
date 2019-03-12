@@ -1,0 +1,144 @@
+@font-face {
+  font-family: "Vhy Pirate";
+  src: url(/assets/fonts/VySans-Regular.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "Vhy Pirate Light";
+  src: url(/assets/fonts/VySans-Light.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "Vhy Pirate Display";
+  src: url(/assets/fonts/VyDisplay-Medium.woff2) format("woff2");;
+}
+
+body {
+  width: 100%;
+  font-size: 16px;
+  font-family: "Vhy Pirate", sans-serif;
+}
+
+h1 {
+  width: 100%;
+  font-size: 50px;
+  margin-top: 7rem;
+  margin-bottom: 5rem;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.d-block {
+  display: block;
+}
+
+.wrap {
+  margin: 0 auto;
+  max-width: 80%;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.wrap img {
+  max-width: 100%;
+  max-height: 696px;
+}
+
+p {
+  width: 100%;
+  margin: 20px 0;
+  padding: 10px 6px;
+  text-align: center;
+}
+
+a,
+a:hover,
+a:visited,
+a:active,
+a:focus {
+  color: #00957a;
+  line-height: 1.5em;
+}
+
+.large {
+  font-size: 24px;
+  font-family: "Vhy Pirate Display";
+}
+
+h2.large {
+  font-size: 60px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.fw-normal {
+  font-weight: normal;
+}
+
+footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media screen and (max-width: 992px) {
+  p {
+    max-width: 100%;
+  }
+}
+
+
+header {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  margin: 1.5rem;
+  padding: 20px 0;
+}
+
+.nav {
+  margin-right: 2rem;
+  font-family: "Vhy Pirate Light", sans-serif;
+}
+
+.nav ul {
+  display: flex;
+  list-style: none;
+
+}
+
+.nav ul li {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav ul li:hover {
+  cursor: pointer;
+}
+
+.nav ul li:hover > .arrow-right {
+  right: -5px;
+}
+
+.nav ul li a {
+  color: #000;
+  font-size: 1.25rem;
+  margin-right: 3rem;
+  text-decoration: none;
+}
+
+.nav ul li .arrow-right {
+  right: 0;
+  position: absolute;
+  transition: right ease-in-out .25s;
+}
